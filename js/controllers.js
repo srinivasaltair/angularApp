@@ -7,6 +7,12 @@ phonecatApp.controller('PhoneListCtrl',function($scope){
 		{'name':'Moto e',
 		'snippet':'smaller yet powerfull'},
 		{'name':'iPhone 6',
-		'snippet':'same old classy with new looks'}
+		'snippet':'same old classy with new looks'},
+		{'name':'Samsung',
+		'snippet':'no difference same old design'}
 	]
+});
+
+phonecatApp.controller('Uname',function($scope){
+	$scope.uname = "Srinivas";
 });

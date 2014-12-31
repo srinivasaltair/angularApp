@@ -8,14 +8,19 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
 	<script src="js/controllers.js"></script>
 </head>
-<body ng-controller="PhoneListCtrl">
+<body class="container" >
 	
-	<ul>
-		<li ng-repeat="phone in phones">
+	<h2 ng-controller="Uname">Hello, {{uname}}</h2>
+	
+	<ul ng-controller="PhoneListCtrl">
+		<li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
 			<span>{{phone.name}}</span>
 			<p>{{phone.snippet}}</p>
 		</li>
+		<p>Total number of phones: {{phones.length}}</p>
+		<br>
+		<br>
+		search: <input ng-model="query">
 	</ul>
-	
 </body>
 </html>
